@@ -5,10 +5,10 @@ body_class: splashBody
 
 <div class="splash container">
     <div class="splash-inner">
-        <div class="splash-logo">
-            <img src="/assets/logo.svg" alt="IoT timeseries labeller logo" />
-            <h1>IoT timeseries labeller</h1>
-        </div>
+        {% if page.splash_logo %}
+        {% include splash-logo.html %}
+        {% endif %}
+
         {{ content }}
     </div>
 </div>
