@@ -1,20 +1,37 @@
 language: ruby
 sudo: false
+cache: bundler
+rvm:
+  - 2.3
 
 before_install:
   - npm i -g npm
   - npm i -g firebase-tools
+  - npm --prefix="./public" install
   - npm --prefix="./roles-manager-app" ci
 
 script:
+  # Build public website
+  - (cd public && bundle exec jekyll build)
   # Build roles manager app
   - npm --prefix="./roles-manager-app" run build
-  - mv ./roles-manager-app/dist ./public/role-management
+  - mv ./roles-manager-app/dist ./public/_site/role-management
+  # Test links on public website
+  - (cd public && bundle exec htmlproofer ./_site)
 
 branches:
   only:
     - master
     - production
+
+env:
+  global:
+    - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
+
+addons:
+  apt:
+    packages:
+      - libcurl4-openssl-dev
 
 deploy:
   - provider: script
