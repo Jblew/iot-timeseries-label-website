@@ -12,7 +12,7 @@ include: ["_pages"]
 ## Front matter defaults
 defaults:
 
-gems:
+plugins:
   - jekyll-seo-tag
 
 exclude:
