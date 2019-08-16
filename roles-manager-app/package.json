@@ -1,0 +1,26 @@
+{
+  "name": "roles-manager-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "build": "rm -rf dist && NODE_ENV=production webpack",
+    "serve": "webpack-dev-server"
+  },
+  "author": "Jędrzej Lewandowski <jedrzejblew@gmail.com> (https://jedrzej.lewandowski.doctor/)",
+  "license": "GPL-3.0-OR-LATER",
+  "dependencies": {
+    "firestore-roles-manager-ui": "^1.7.0",
+    "iot-timeseries-label-core": "^1.1.1"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^5.0.4",
+    "css-loader": "^3.1.0",
+    "file-loader": "^4.1.0",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.7.2"
+  }
+}
