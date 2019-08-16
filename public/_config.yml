@@ -1,0 +1,40 @@
+name: IoT timeseries labeller
+title: "IoT timeseries labeller"
+email: jedrzej@lewandowski.doctor
+description: Send sensor data to firestore and label them using IoT timeseries labeller
+url: ""
+baseurl: "/"
+
+# Build settings
+markdown: kramdown
+include: ["_pages"]
+
+## Front matter defaults
+defaults:
+
+gems:
+  - jekyll-seo-tag
+
+exclude:
+  - vendor
+  - Gemfile
+  - Gemfile.lock
+
+sass:
+  load_paths:
+    - _sass
+    - node_modules
+
+text:
+  title: "IoT timeseries labeller"
+  subtitle: "Label timeseries data from IoT sensors"
+
+links:
+  author: https://jedrzej.lewandowski.doctor/
+  license: https://www.gnu.org/licenses/gpl-3.0.html
+  roleManagement: /role-management/
+  authorEmailSplit: jedrzej [at] lewandowski.doctor
+
+# Prayer:
+#  Gloria Patri, et Filio, et Spiritui Sancto, sicut erat in principio et nunc et semper et in saecula
+#  saeculorum. Amen. In te, Domine, speravi: non confundar in aeternum.
