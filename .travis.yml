@@ -16,6 +16,7 @@ branches:
     - master
     - production
 
+deploy:
   - provider: script
     script: bash -c "npx firebase deploy --only hosting"
     skip_cleanup: true
