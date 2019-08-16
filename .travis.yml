@@ -1,0 +1,25 @@
+language: ruby
+sudo: false
+
+before_install:
+  - npm i -g npm
+  - npm i -g firebase-tools
+  - npm --prefix="./roles-app" ci
+
+script:
+  # Build roles manager app
+  - npm --prefix="./roles-manager-app" run build
+  - mv ./roles-manager-app/dist ./public/role-management
+
+branches:
+  only:
+    - master
+    - production
+
+  - provider: script
+    script: bash -c "npx firebase deploy --only hosting"
+    skip_cleanup: true
+    on:
+      tags: false
+      branch: production
+
