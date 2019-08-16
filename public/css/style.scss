@@ -1,0 +1,14 @@
+--- --- @import "variables.scss";
+@import "mixins.scss";
+
+@import "bootstrap/scss/bootstrap";
+
+
+// Global CSS
+@import "global.scss";
+@import "layout.scss";
+
+//Page elements
+@import "footer.scss";
+@import "splash.scss";
+@import "main.scss";
