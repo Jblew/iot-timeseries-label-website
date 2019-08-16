@@ -1,13 +1,26 @@
 .main {
     .app-chooser {
-        p {
-            font-size: 2rem;
+        .app-col {
             text-align: center;
-            width: 100%;
+        }
 
-            a {
+        img {
+            max-width: 10rem;
+            border-radius: 5%;
+        }
 
-                color: black !important;
+        a {
+            color: black !important;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+
+            p {
+                font-size: 2rem;
+                text-align: center;
+                width: 100%;
             }
         }
     }
