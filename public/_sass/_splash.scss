@@ -1,5 +1,8 @@
 .splashBody {
     height: 100%;
+    background-image: url(/assets/background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -46,8 +49,16 @@
     }
 
     width: 100%;
-    padding: 2rem;
+    padding: 1.5rem;
     font-size: 0.75em;
+    text-align: center;
+    background: $secondary;
+    color: white;
+
+    p {
+        text-align: center;
+        width: 100%;
+    }
 }
 
 .splash-logo {
@@ -56,7 +67,15 @@
 
     img {
         width: 15rem;
-        @include shadow(0, 0, 5px, 0, rgba(0, 0, 0, 0.075));
+        @include shadow(0, 0, 7px, 0, rgba(12, 12, 12, 0.4));
         border-radius: 5%;
+    }
+
+    h1 {
+        line-height: 2rem;
+        font-size: 1rem;
+        letter-spacing: 0.1rem;
+        text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, .5);
+        text-align: center;
     }
 }
