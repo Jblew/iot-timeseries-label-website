@@ -1,30 +1,14 @@
-main {
-    padding-top: 3rem;
-    color: #5a5a5a;
-
-    .service-row {
-        .col-sm-4 {
-            margin-bottom: 1.5rem;
+.main {
+    .app-chooser {
+        p {
+            font-size: 2rem;
             text-align: center;
+            width: 100%;
+
+            a {
+
+                color: black !important;
+            }
         }
-    }
-
-    .marketing h2 {
-        font-weight: 400;
-    }
-
-    .marketing .col-lg-4 p {
-        margin-right: .75rem;
-        margin-left: .75rem;
-    }
-
-    .main-content {
-        h2 {
-            margin-top: 2rem;
-        }
-    }
-
-    hr {
-        width: 100%;
     }
 }
