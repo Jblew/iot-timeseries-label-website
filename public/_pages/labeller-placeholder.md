@@ -1,6 +1,6 @@
 ---
 layout: splash
-permalink: /labeller
+permalink: /labeller/
 ---
 
 # Labeller placeholder
